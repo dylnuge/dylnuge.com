@@ -78,7 +78,7 @@ pre, code, kbd, samp {
 }
 
 a {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 a:hover, a:active {
   outline: none;
@@ -165,7 +165,7 @@ button {
 }
 
 select, input, textarea {
-  color: #444444;
+  color: #444;
 }
 
 a {
@@ -339,7 +339,7 @@ blockquote cite {
 }
 
 a, a:hover, a:focus, a:active, a:visited {
-  color: #c00;
+  color: #00c;
   text-decoration: none;
 }
 a:hover, a:focus {
@@ -387,3 +387,5 @@ a:hover, a:focus {
 .deck-menu .deck-current, .no-touch .deck-menu .slide:hover {
   background: #ddf;
 }
+
+/*# sourceMappingURL=swiss.css.map */
