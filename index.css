@@ -1,0 +1,65 @@
+body {
+    background-color: #fffcf9;
+    color: #0b2423;
+}
+
+.container {
+    width: 80%;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.separator {
+    border-bottom: .05rem solid #712325;
+    margin: 1em 0;
+}
+
+.title {
+    font-size: 5rem;
+    font-family: 'Rubik', sans-serif;
+    margin: .5rem 0;
+    color: #23716f;
+}
+
+.title-subhead {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    margin: .5rem 0;
+    text-align: justify;
+}
+
+.section-header {
+    font-size: 2.5rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    color: #23716f;
+    margin: .5rem 0 1rem;
+}
+
+.section-contents {
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    margin: .5rem 0;
+}
+
+.section-contents p {
+    margin: 0 0 1.2rem;
+}
+
+.section-contents a:link,
+.section-contents a:visited {
+    color:#234c71;
+    font-weight: 700;
+}
+
+.section-contents a:hover {
+    color: #237148;
+}
+
+.contact-list li{
+    margin: .3rem 0;
+}
+
+.console-text {
+    font-family: 'Roboto Mono', monospace;
+}
