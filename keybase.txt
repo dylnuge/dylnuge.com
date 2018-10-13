@@ -1,0 +1,69 @@
+==================================================================
+https://keybase.io/dylnuge
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://dylnuge.com
+  * I am dylnuge (https://keybase.io/dylnuge) on keybase.
+  * I have a public key with fingerprint 2002 7718 90E2 E891 25D4  0F4C E9A6 EA5E 0F10 DF5D
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101a03d4da7a9cb974bb009822c8548a64fbbe0f8b39c63c2c8ad906028f09c93080a",
+      "fingerprint": "2002771890e2e89125d40f4ce9a6ea5e0f10df5d",
+      "host": "keybase.io",
+      "key_id": "e9a6ea5e0f10df5d",
+      "kid": "0101a03d4da7a9cb974bb009822c8548a64fbbe0f8b39c63c2c8ad906028f09c93080a",
+      "uid": "6fc3594a9ac3620b5977ac8742a91919",
+      "username": "dylnuge"
+    },
+    "service": {
+      "hostname": "dylnuge.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1539472086,
+  "expire_in": 157680000,
+  "prev": "60353226da629e897032d7d194df37fd299a54e3035154e7f8ede5b91b4ac4bd",
+  "seqno": 47,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.80
+Comment: https://keybase.io/crypto
+
+yMIjAnicrVJbSBRRGJ7thhobSVFRFjQkEZiduc9ZKy27IRQV1UMq25k5Z9apdWab
+nd3alqJ66QZhkZmEEmFhPVgZKUKILhJaYRIm0p2uBkWYEXaROiP1EPTYOQ8/5z/f
+953v/zgd/rFMhm920cf9/dOqrvjutJ+OMcWpPX1JVrNxgg0k2R1ktJAwJlE3uMPE
+bIAFHOAQELCIkYKgrkFF1DQAoMrzuiqJKpJFQ9MIMFRNgLos6LSNMAQy4FUDQB0K
+QAWIzWEN0woRJ+KYlktleQB4ReFUCAhPVMjxEhaBIeoEIpkgiepxABsSpsQyO+ox
+qDkNRUmuadMePQRH7f0D/599x0blZEMXJCgiiHRB5oEmQUVBuqqIPIIc3R4wShwL
+lROKxomwFQsRdm8OS5txUydert4gfwNydbucMiOO7dq6HaYXZa4biQY8opuIeMhd
+RAv+1ghqpoVpipQRJ07UtC02wFGk7pqeKCcJUFR4oMo5LNkdMR0SND2EpMgqoMt7
+h8S9WYAgCTwvYyTzkIavAIHHCuagiA1BMTAPIZJEIlAYR6tiqAQTSYOcJiJd1LyM
+o2SnZbMBUaE+UYhqRs2QhdyYQ2dOtZWMY3wZzITxY7zvxWSkT/7z6YZupzG1rn5w
+kX+k0n9t6P2tzXtbj10sScFNF4DzY2TtgvicyoR/3pZe7XzBp3MXaofz1pUfP5bZ
+3DhjSe/KpXmPtj/ztVTZm6vbX9bUpL21zO7B3RtI3c0baWd/XnmyYdL0y/0fGti8
+opNHn5au+ZY2vx8fKe1eMGZk7hfUM9xZdjVW+qJ23OPGCjD0uiv8UD2XnJr/tWko
+XtnQs/+SkbXKLGaakifaVmyald1VnL5t+V3x1bXFqUylsK165mBF67465TmaUGh0
+thRUW/Hye6mBQ/kdmVnrG1sq8usPT2memNU+PCC7n1df/14yY+ubZbEH1pPFhWcK
+Ft4/tZF519o3s6c++8DXVb8APzhFmw==
+=GVdx
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dylnuge
+
+==================================================================
+
