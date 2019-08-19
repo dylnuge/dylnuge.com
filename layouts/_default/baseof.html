@@ -10,7 +10,18 @@
     <link href="index.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
+    <div class="header">
+
+      <div class="content-container">
+        <div class="site-title">Hi, I'm Dylan</div>
+        <div class="site-subhead">
+          I'm an SF-based software engineer often going by <span class="console-text">
+          dylnuge</span> online. This is my self-indulgent potpourri of projects and
+          writings on software and everything else.
+        </div>
+      </div>
+    </div>
+    <div class="content-container">
         {{ block "main" . }}
 
         {{ end }}
