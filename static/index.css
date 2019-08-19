@@ -29,11 +29,12 @@ body {
 }
 
 .site-subhead {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-family: 'Roboto', sans-serif;
     margin: .5rem 0;
     text-align: justify;
-    color: #e0e0e0;
+    color: #f8fafa;
+    font-weight: 500;
 }
 
 .section-header {
