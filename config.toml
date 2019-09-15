@@ -1,3 +1,7 @@
 baseURL = "https://dylnuge.com/"
 languageCode = "en-us"
 title = "dylnuge -v"
+pygmentsCodeFences = true
+
+[blackfriday]
+plainIDAnchors = false
