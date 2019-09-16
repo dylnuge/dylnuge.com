@@ -7,11 +7,12 @@ body {
 }
 
 p {
-    margin: 0 0 1.2rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.25;
 }
 
 p:last-child {
-    margin: 0rem;
+    margin-bottom: 0rem;
 }
 
 a:link,
@@ -52,11 +53,11 @@ pre {
 }
 
 blockquote {
-  margin: 1em;
-  border-left: solid 0.1em #23716f;
-  padding: 0.5em 2em;
-  position: relative;
-  background-color: #eeeeee;
+    margin: 1em;
+    border-left: solid 0.1em #23716f;
+    padding: 0.5em 2em;
+    position: relative;
+    background-color: #eeeeee;
 }
 
 .header {
@@ -66,7 +67,7 @@ blockquote {
 
 .content-container {
     width: 80%;
-    max-width: 60rem;
+    max-width: 50rem;
     margin: 0 auto;
 }
 
@@ -110,4 +111,8 @@ blockquote {
 
 .console-text {
     font-family: 'Roboto Mono', monospace;
+}
+
+.main-content {
+    text-align: justify;
 }
