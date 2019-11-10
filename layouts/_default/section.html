@@ -2,18 +2,16 @@
   {{ .Title }}
 {{ end }}
 {{ define "main" }}
-    <ul>
     {{ range .Pages }}
         {{ if .Params.publish }}
-            <li>
-                <a href="{{.Permalink}}">{{.Title}}</a>
-            </li>
-            <em>Published <time>{{ .Date.Format "Jan 2, 2006" }}</time></em>
-            <p>{{ .Summary }}</p>
-            {{ if .Truncated }}
-                <a href="{{ .RelPermalink }}">Read More...</a>
-            {{ end }}
+            <div class="post-summary">
+                <h2><a href="{{.Permalink}}">{{.Title}}</a></h2>
+                <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+                <p>{{ .Summary }}</p>
+                {{ if .Truncated }}
+                    <a href="{{ .RelPermalink }}">Read More...</a>
+                {{ end }}
+            </div>
         {{ end }}
     {{ end }}
-    </ul>
 {{ end }}

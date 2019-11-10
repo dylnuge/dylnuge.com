@@ -92,6 +92,10 @@ nav.right-nav a, nav.right-nav a:hover, nav.right-nav a:link, nav.right-nav a:vi
     padding-right: 0rem;
 }
 
+time {
+    font-style: italic;
+}
+
 .content-container {
     width: 90%;
     max-width: 800px;
