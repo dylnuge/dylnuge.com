@@ -2,7 +2,7 @@ body {
     background-color: #f8fafa;
     color: #0b2423;
     margin: 0rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -66,8 +66,8 @@ blockquote {
 }
 
 .content-container {
-    width: 80%;
-    max-width: 50rem;
+    width: 90%;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -77,8 +77,6 @@ blockquote {
 }
 
 .site-title {
-    width: 80%;
-    max-width: 60rem;
     font-size: 4rem;
     font-family: 'Rubik', sans-serif;
     color: #f8fafa;
