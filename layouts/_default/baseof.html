@@ -14,8 +14,7 @@
     <link rel="manifest" href="/site.webmanifest">
   </head>
   <body>
-    <div class="header">
-
+    <header>
       <div class="content-container">
         <div class="site-title">Hi, I'm Dylan</div>
         <div class="site-subhead">
@@ -23,8 +22,17 @@
           dylnuge</span> online. This is my self-indulgent potpourri of projects and
           writings on software and everything else.
         </div>
+        <hr class="header-separator"></hr>
+        <nav class="main-nav">
+          <a href="/">Home</a>
+          <a href="/post/">Posts</a>
+        </nav>
+        <nav class="right-nav">
+          <a href="https://twitter.com/dylnuge">🐦</a>
+        </nav>
       </div>
-    </div>
+    </header>
+
     <div class="main-content">
       <div class="content-container">
           {{ block "main" . }}

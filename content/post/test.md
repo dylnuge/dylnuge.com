@@ -1,8 +1,8 @@
 +++
 title = "Test Post, Please Ignore"
+publish = true
+date = "2019-11-10"
 +++
-
-# Test Post, Please Ignore
 
 When in the course of human events it becomes necessary for one developer to
 dissolve the overmonetized bands which have connected them with their blogging

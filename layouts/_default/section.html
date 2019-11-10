@@ -1,0 +1,19 @@
+{{ define "title" }}
+  {{ .Title }}
+{{ end }}
+{{ define "main" }}
+    <ul>
+    {{ range .Pages }}
+        {{ if .Params.publish }}
+            <li>
+                <a href="{{.Permalink}}">{{.Title}}</a>
+            </li>
+            <em>Published <time>{{ .Date.Format "Jan 2, 2006" }}</time></em>
+            <p>{{ .Summary }}</p>
+            {{ if .Truncated }}
+                <a href="{{ .RelPermalink }}">Read More...</a>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+    </ul>
+{{ end }}
