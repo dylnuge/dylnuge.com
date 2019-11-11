@@ -17,7 +17,7 @@ posts: there's probably dozens of "I'm quitting &lt;insert social media platform
 here&gt;" stories out there, and this is basically just another one (plus, I
 need _something_ to serve as a first post on this blog). Feel free to skip it.
 
-# Goodbye, Medium
+## Goodbye, Medium
 
 There are a lot of reasons I started writing on Medium. It was popular and
 trendy. I loved the design, and it let me focus on the content of my post
@@ -31,7 +31,7 @@ your article to be monetized, they won't share it with others. It seems to me
 like nearly everything they promote on their site directly is now behind a 3
 article paywall.
 
-## Medium's Monetization Makes No Sense for Readers
+### Medium's Monetization Makes No Sense for Readers
 
 Medium seems to want to monetize the way publishers do, but they seem unwilling
 to actually behave like a publisher.
@@ -103,7 +103,7 @@ took a negative stance on Medium).
 [^2]: I cite sources for my information including two books and the 1992 INSAG report on the disaster. I use images which I'm legally allowed to use and clearly cite those sources as well. Ensuring my citations exist, I'm allowed to cite them, and that they say what I claim they do is a basic editorial duty. In other words, I'm unsure anyone checked my article wasn't just "Fake News." Medium does claim to do this, but it would take more than a couple hours for a deeply technical story.
 [^3]: Medium does publish a [basic set of minimum guidelines and content rules](https://help.medium.com/hc/en-us/articles/360006362473-Medium-s-Curation-Guidelines-Everything-Writers-Need-to-Know) for writers, but it do not seem to have explicit style guidelines beyond this, so paywalled articles are all over the place.
 
-## Medium's Monetization Kills Its Platform Value
+### Medium's Monetization Kills Its Platform Value
 
 It seems to me like Medium wants to monetize like a publisher but _be_ a
 platform. However, Medium is moving towards only actually recommending articles
@@ -134,7 +134,7 @@ distribution algorithms[^5].
 [^4]: "In time, most stories we recommend to readers will be part of Medium’s paywall," from [Medium's official blog](https://blog.medium.com/how-mediums-curation-distribution-and-paywall-systems-work-for-writers-f74994ce9ed9)
 [^5]: How distribution algorithms for sites like Facebook and Twitter work are closely guarded trade secrets. If you have any information about this and are willing to discuss it, please reach out to me. I follow the [SPJ's guidelines on anonymous sources](https://www.spj.org/ethics-papers-anonymity.asp) and do not disclose information without consent.
 
-## Medium Doesn't Feel Right for Most of My Writing
+### Medium Doesn't Feel Right for Most of My Writing
 
 This last point in my rambling is more personal. Both of the articles I've had
 do well on Medium were written as in-depth journalism feature pieces (the first
@@ -170,7 +170,7 @@ than the rule. And I'm OK with that.
 [^8]: Like footnotes. Shockingly.
 [^9]: My Medium editorial voice is probably more irreverent and comic than either of those publications would accept, but it's still not that far off, and in particular the comedy seems to land well on Medium.
 
-# Hello, Homepage
+## Hello, Homepage
 
 Okay, so that was a bit _ranty_, and the truth is, Medium has to figure out how
 to handle the challenge of monetization, and it's a difficult problem for them.
