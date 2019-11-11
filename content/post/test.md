@@ -1,7 +1,7 @@
 +++
 title = "Test Post, Please Ignore"
 publish = true
-date = "2019-11-10"
+date = 2019-11-07
 +++
 
 When in the course of human events it becomes necessary for one developer to
