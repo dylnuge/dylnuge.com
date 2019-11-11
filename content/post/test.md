@@ -18,7 +18,7 @@ Having no decent respect for the opinions of social media, I decline.
 > "True glory consists in doing what deserves to be written, in writing what
 > deserves to be read."
 >
-> —Pliney the Elder
+> —Pliney the Elder  
 > —Leonard Nimoy, Civilization IV
 
 We write because we can, and we assume other people will read it. This is a test
