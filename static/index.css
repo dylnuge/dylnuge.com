@@ -74,8 +74,7 @@ blockquote {
 
 header {
     background-color: #23716f;
-    padding-top: 2rem;
-    padding-bottom: 0.5rem;
+    padding: 0.75rem 0;
 }
 
 nav {
@@ -99,6 +98,10 @@ nav a:hover {
 
 nav a.twitter:hover {
     color: #00aced;
+}
+
+nav a.github:hover {
+    color: #24292e;
 }
 
 nav.right-nav {
