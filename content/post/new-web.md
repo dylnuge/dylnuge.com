@@ -4,20 +4,20 @@ publish = true
 date = 2019-11-10
 +++
 
-The last two articles I wrote on Medium both got tens of thousands of views
-(according to Medium's stats). It felt great to go viral (by some standard), but
-I find myself frustrated with Medium's current model and the control I
-sacrifice over my content in order to write there. I'm done with Medium now.
-
 Blogs are kind of self-indulgent things. I want the posts I write to reach
 people and help people, but at the same time I'm definitely doing this for
 myself. I like writing, sharing content, and of course, there's a tinge of
 excitement to going viral.  This is going to be one of those self-indulgent
 posts: there's probably dozens of "I'm quitting &lt;insert social media platform
-here&gt;" stories out there, and this is basically just another one (plus, I
-need _something_ to serve as a first post on this blog). Feel free to skip it.
+here&gt;" stories out there, and this is basically just another one. Feel free
+to skip it.
 
 ## Goodbye, Medium
+
+The last two articles I wrote on Medium both got tens of thousands of views
+(according to Medium's stats). It felt great to go viral (by some standard), but
+I find myself frustrated with Medium's current model and the control I
+sacrifice over my content in order to write there. I'm done with Medium now.
 
 There are a lot of reasons I started writing on Medium. It was popular and
 trendy. I loved the design, and it let me focus on the content of my post
