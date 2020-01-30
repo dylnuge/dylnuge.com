@@ -194,3 +194,7 @@ twitter-widget {
 .main-content {
     text-align: left;
 }
+
+table.post-list {
+    border-spacing: 10px 5px;
+}
