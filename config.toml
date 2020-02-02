@@ -3,3 +3,6 @@ languageCode = "en-us"
 title = "Dylan Nugent"
 
 pygmentsCodeFences = true
+
+[markup.goldmark.renderer]
+unsafe = true

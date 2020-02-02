@@ -22,7 +22,7 @@ p:last-child {
 a:link,
 a:visited {
     color:#234c71;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 a:hover {
@@ -32,7 +32,7 @@ a:hover {
 h1 {
     font-size: 3rem;
     font-family: 'Rubik', sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     color: #23716f;
     margin: 1em 0 .5em;
     line-height: 1;
@@ -41,7 +41,7 @@ h1 {
 h2 {
     font-size: 2.0rem;
     font-family: 'Rubik', sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     color: #23716f;
     margin: 1em 0 .5em;
     line-height: 1;
@@ -49,7 +49,7 @@ h2 {
 
 h3 {
     font-size: 1.4rem;
-    font-weight: 700;
+    font-weight: 400;
     color: #23716f;
     margin: 1em 0 -0.5em 0;
     line-height: 1;
@@ -88,7 +88,7 @@ nav {
     padding-bottom: 0rem;
     display: inline-block;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 
@@ -180,7 +180,7 @@ twitter-widget {
 }
 
 .project-links a{
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .contact-list li{
