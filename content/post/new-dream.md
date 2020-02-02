@@ -145,7 +145,7 @@ We've also seen it get increasingly easier to make content of our own. There
 are tools like Squarespace and Wix for making websites without knowledge of
 HTML and CSS. If you want to learn those, tons of well written tutorials and
 documentation exists, from sites like MDN and W3Schools[^10] to developer
-blogs. You can host for free with services like GitHub Pages or Netilfy[^11].
+blogs. You can host for free with services like GitHub Pages or Netlify[^11].
 
 What if the solution isn't for Twitter and Facebook to find new avenues of
 revenue but for us to stop leaning so heavily on them? Discord servers can
@@ -189,7 +189,7 @@ it.
     bunch of developers made the website W3Fools to point out all the serious
     errors on the site.
 
-[^11]: This website is hosted for free through Netilfy. The only fee associated
+[^11]: This website is hosted for free through Netlify. The only fee associated
     with this site is the $12/year I pay for the domain name.
 
 [^12]: I can't imagine the Jepsen series or Julia Evan's zines having the same

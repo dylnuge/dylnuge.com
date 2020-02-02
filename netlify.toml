@@ -3,3 +3,7 @@
 
     [headers.values]
         Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+
+
+[context.production.environment]
+    HUGO_VERSION = "0.63.2"
