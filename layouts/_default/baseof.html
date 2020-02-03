@@ -7,6 +7,16 @@
       {{ end }}
     </title>
 
+    <!-- Site Metadata -->
+    <meta charset="utf-8">
+    <meta name="title" content="{{ .Title }}">
+    <meta name="author" content="Dylan Nugent">
+    {{ if .Params.description }}
+      <meta name="description" content="{{ .Params.description }}">
+    {{ else }}
+      <meta name="description" content="Dylan's random musings on life, software, and everything.">
+    {{ end }}
+
     <!-- Stylesheets, Fonts, and Icons -->
     <link href="/index.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Rubik|Roboto+Mono" rel="stylesheet">
