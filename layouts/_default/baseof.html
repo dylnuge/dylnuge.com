@@ -17,6 +17,20 @@
       <meta name="description" content="Dylan's random musings on life, software, and everything.">
     {{ end }}
 
+    <meta name="twitter:card" content="summary"></meta>
+    <!-- Dumb that this is a duplicate of the above but it seems to be needed;
+      Twitter won't fall back on "normal" meta tags. Can probably consolidate
+      this at some point. -->
+    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:author" content="Dylan Nugent">
+    {{ if .Params.description }}
+      <meta property="og:description" content="{{ .Params.description }}">
+    {{ else }}
+      <meta property="og:description" content="Dylan's random musings on life, software, and everything.">
+    {{ end }}
+    <meta name="twitter:site" content="@dylnuge">
+    <meta name="twitter:creator" content="@dylnuge">
+
     <!-- Stylesheets, Fonts, and Icons -->
     <link href="/index.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Rubik|Roboto+Mono" rel="stylesheet">
