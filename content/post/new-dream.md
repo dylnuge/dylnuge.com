@@ -1,7 +1,7 @@
 +++
 title = "A New Dream of the Old Web"
 publish = true
-date = 2020-02-01
+date = 2020-02-03
 +++
 
 I grew up on the internet, and I've watched it change in so many ways. I hear
@@ -189,11 +189,13 @@ it.
     bunch of developers made the website W3Fools to point out all the serious
     errors on the site.
 
-[^11]: This website is hosted for free through Netlify. The only fee associated
-    with this site is the $12/year I pay for the domain name.
+[^11]: This website is built with [Hugo](https://gohugo.io/) and hosted for free
+    through [Netlify](https://www.netlify.com/). The only fee associated with
+    this site is the $12/year I pay for the domain name.
 
-[^12]: I can't imagine the Jepsen series or Julia Evan's zines having the same
-    feel on Medium.
+[^12]: I can't imagine the [Jepsen](https://aphyr.com/tags/jepsen) series or
+    [Julia Evan's zines](https://wizardzines.com/) having the same feel on
+    Medium.
 
 [^13]: Plus the effort is fun!
 
