@@ -11,8 +11,9 @@ Usually that's tech related. Sometimes it's music, running, backpacking, mental
 health, or video games.
 
 I'll be participating in the Spring 1 batch of [Recurse
-Center](https://www.recurse.com/) and plan to write about what I'm working on
-here, so that's likely to be the central theme for at least the next few months.
+Center](https://www.recurse.com/scout/click?t=0ed1e008055df394a2f2f5f6115f74af)
+and plan to write about what I'm working on here, so that's likely to be the
+central theme for at least the next few months.
 
 This blog doesn't support comments but if you have questions, feel free to reach
 out—my Twitter DMs are usually open, and I'm available on Keybase and Signal if
