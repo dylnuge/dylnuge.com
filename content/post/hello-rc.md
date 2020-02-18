@@ -263,4 +263,4 @@ Thanks for reading this whole thing! I look forward to regular—and
 shorter—checkins for the rest of my batch.
 
 [^13]: OK I'm getting vaguer now because I'm ready to finish writing this post;
-  it's over nearly 2500 words and I've been writing for almost an hour!
+  it's over 2500 words and I've been writing for almost an hour!
