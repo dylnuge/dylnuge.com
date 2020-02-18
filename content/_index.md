@@ -7,12 +7,12 @@ title = "dylnuge -v"
 My name is Dylan Nugent, and I work and play with software. I enjoy building
 systems, understanding systems, and writing about how they work. My writing
 isn't connected by a more complex theme than "things I want to write about."
-Usually that's tech related. Sometimes it's music, running, backpacking, mental
-health, or video games.
+Usually that's tech related, either programming or engineering leadership.
+Sometimes it's music, running, backpacking, mental health, or video games.
 
-I'll be participating in the Spring 1 batch of [Recurse
+I'm participating in the Spring 1 batch of [Recurse
 Center](https://www.recurse.com/scout/click?t=0ed1e008055df394a2f2f5f6115f74af)
-and plan to write about what I'm working on here, so that's likely to be the
+and writing about what I'm working on here, so that's likely to be the
 central theme for at least the next few months.
 
 This blog doesn't support comments but if you have questions, feel free to reach
