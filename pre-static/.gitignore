@@ -1,0 +1,4 @@
+# Ignore output formats in this directory only
+*.png
+*.ico
+icons/*
