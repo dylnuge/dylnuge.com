@@ -198,3 +198,13 @@ twitter-widget {
 table.post-list {
     border-spacing: 10px 5px;
 }
+
+/* Stuff from the House of Leaves parody */
+span.leaves-parody-text {
+    font-family: 'Courier New', sans-serif;
+}
+
+span.leaves-parody-code {
+    font-weight: 700;
+    color: #234c71;
+}
