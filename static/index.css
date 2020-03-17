@@ -22,11 +22,14 @@ p:last-child {
 a:link,
 a:visited {
     color:#234c71;
-    font-weight: 500;
 }
 
 a:hover {
     color: #237148;
+}
+
+strong {
+    font-weight: 700;
 }
 
 h1 {
@@ -57,6 +60,10 @@ h3 {
 
 h1:first-child, h2:first-child, h3:first-child {
     margin-top: 0;
+}
+
+li:not(:last-child) {
+    margin-bottom: 0.4rem;
 }
 
 code {
