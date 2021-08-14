@@ -10,10 +10,8 @@ isn't connected by a more complex theme than "things I want to write about."
 Usually that's tech related, either programming or engineering leadership.
 Sometimes it's music, running, backpacking, mental health, or video games.
 
-I'm participating in the Spring 1 batch of [Recurse
-Center](https://www.recurse.com/scout/click?t=0ed1e008055df394a2f2f5f6115f74af)
-and writing about what I'm working on here, so that's likely to be the
-central theme for at least the next few months.
+I currently work at [The New York Times](nytimes.com) on our GraphQL API,
+caching infrastructure, and common services platform.
 
 This blog doesn't support comments but if you have questions, feel free to reach
 out—my Twitter DMs are usually open, and I'm available on Keybase and Signal if
@@ -26,6 +24,10 @@ Thanks for stopping by!
 
 This website is relatively new, so here's a collection of stuff I've done online
 before I set this up.
+
+### Let's Implement DNS to Learn History (!!con 2020)
+
+I delievered a [talk on quirks of DNS](https://www.youtube.com/watch?v=PFAgpqFi3No) and what they tell us about the history of computing at [!!con 2020](https://bangbangcon.com/2020/). I love putting systems in the context of the people who created them. This talk was a joy to create and deliver, and was my first time speaking at a public conference (as well as my first time giving a talk remotely).
 
 ### Smashing Stacks
 
@@ -90,6 +92,11 @@ None of this stuff is quite complete, but if you're looking to deep dive into
 random stuff I've made public, here it is.
 
 <ul class="project-links">
+  <li>
+    <a href="https://github.com/Dylnuge/montague">Montague</a>
+    &mdash;
+    A simple lightweight recursive DNS server written in Rust.
+  </li>
   <li>
     <a href="https://github.com/Dylnuge/cryptopals">Cryptopals</a>
     &mdash;
