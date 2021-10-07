@@ -4,14 +4,12 @@ title = "dylnuge -v"
 
 ## About Me
 
-My name is Dylan Nugent, and I work and play with software. I enjoy building
-systems, understanding systems, and writing about how they work. My writing
-isn't connected by a more complex theme than "things I want to write about."
-Usually that's tech related, either programming or engineering leadership.
-Sometimes it's music, running, backpacking, mental health, or video games.
-
-I currently work at [The New York Times](nytimes.com) on our GraphQL API,
-caching infrastructure, and common services platform.
+My name is Dylan, and I work and play with software. I enjoy building
+systems, breaking systems, understanding systems, and writing about how it all
+works. My writing isn't connected by a more complex theme than "things I want to
+write about." Usually that's tech related, either programming or engineering
+leadership.  Sometimes it's music, running, backpacking, mental health, or video
+games.
 
 This blog doesn't support comments but if you have questions, feel free to reach
 out—my Twitter DMs are usually open, and I'm available on Keybase and Signal if
@@ -20,14 +18,45 @@ non-tech) Slacks and Discords. Chances are good if you see a "dylnuge" it's me.
 
 Thanks for stopping by!
 
-## Projects, Articles, and Talks
+## Professional Background
 
-This website is relatively new, so here's a collection of stuff I've done online
-before I set this up.
+I am currently employed full-time and not available for contract work or hire.
+
+I've worked as a software engineer (and occasional manager) at lots of different
+tech companies, ranging from small startups to massive tech behemoths. I lead
+teams in developing and maintaining robust, scalable architecture. I'm
+systems-oriented and love getting my "hands dirty" with the actual operations
+side of infrastructure; on most teams I've been on, I've been the go-to "infra
+person" who knows how things fit together inside and out, from high-level
+architecture diagrams to the specific interactions of a handful of configs
+sitting on boxes (and the deployment processes that put those configs there). I
+also really love debugging; the puzzle solving of it meshes extremely well with
+my brain, and I tend to be good at figuring out why something is happening.
+
+I work best in collaborative environments with a good sense of team cohesion;
+generally speaking, I like working on teams where we're all focused on the same
+problems, even if everyone's individual work on that problem differs from day to
+day. I enjoy pairing with other developers on occasion and think that most
+companies undervalue this; in my personal experience, it's one of the most
+powerful ways to onboard new engineers, up-level people, and overcome the
+work anxieties that can create friction on a project.
+
+I've been fortunate enough to work on some incredible things in my career. Some
+of the professional projects I'm most proud of working on include: leading the
+design and development of a large-scale data warehouse for the federal agency
+overseeing Medicaid, building a data pipeline from scratch that could process
+tens of millions of network events per second at BlueVoyant, and helping scale
+the New York Times for the 2020 elections.
+
+## Projects, Articles, and Talks
 
 ### Let's Implement DNS to Learn History (!!con 2020)
 
-I delievered a [talk on quirks of DNS](https://www.youtube.com/watch?v=PFAgpqFi3No) and what they tell us about the history of computing at [!!con 2020](https://bangbangcon.com/2020/). I love putting systems in the context of the people who created them. This talk was a joy to create and deliver, and was my first time speaking at a public conference (as well as my first time giving a talk remotely).
+I delivered a [talk on quirks of DNS](https://www.youtube.com/watch?v=PFAgpqFi3No)
+and what they tell us about the history of computing at [!!con 2020](https://bangbangcon.com/2020/).
+I love putting systems in the context of the people who created them. This talk
+was a joy to create and deliver, and was my first time speaking at a public
+conference (as well as my first time giving a talk remotely).
 
 ### Smashing Stacks
 

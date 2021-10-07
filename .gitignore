@@ -1,2 +1,5 @@
 public/
 .netlify
+
+# Hugo lock file, anything similarly named
+*.lock
