@@ -10,15 +10,11 @@ isn't connected by a more complex theme than "things I want to write about."
 Usually that's tech related, either programming or engineering leadership.
 Sometimes it's music, running, backpacking, mental health, or video games.
 
-I currently work at [The New York Times](nytimes.com) on our GraphQL API,
-caching infrastructure, and common services platform.
-
-This blog doesn't support comments but if you have questions, feel free to reach
-out—my Twitter DMs are usually open, and I'm available on Keybase and Signal if
-you're concerned about privacy. I'm also a member of a number of tech (and
-non-tech) Slacks and Discords. Chances are good if you see a "dylnuge" it's me.
-
-Thanks for stopping by!
+This blog intentionally doesn't support comments. If you have questions, feel
+free to reach out—my Twitter DMs are usually open, and I'm available on Keybase
+and Signal if you're concerned about privacy. I'm also a member of a number of
+tech (and non-tech) Slacks and Discords and the like. Chances are good if you
+see a "dylnuge" it's me.
 
 ## Projects, Articles, and Talks
 
