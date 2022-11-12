@@ -4,12 +4,11 @@ title = "dylnuge -v"
 
 ## About Me
 
-My name is Dylan, and I work and play with software. I enjoy building
-systems, breaking systems, understanding systems, and writing about how it all
-works. My writing isn't connected by a more complex theme than "things I want to
-write about." Usually that's tech related, either programming or engineering
-leadership.  Sometimes it's music, running, backpacking, mental health, or video
-games.
+I enjoy building systems, breaking systems, understanding systems, and writing
+about how it all works. My writing isn't connected by a more complex theme than
+"things I want to write about." Usually that's tech related, either programming
+or engineering leadership.  Sometimes it's music, running, backpacking, mental
+health, or video games.
 
 This blog doesn't support comments but if you have questions, feel free to reach
 out—my Twitter DMs are usually open, and I'm available on Keybase and Signal if
