@@ -3,6 +3,7 @@ title = "COVID-19"
 publish = true
 date = 2020-03-13
 description = """Last week at Recurse Center in person."""
+aliases = ["/post/covid/"]
 +++
 
 This was my last week at Recurse Center in person; [we've closed as a precaution

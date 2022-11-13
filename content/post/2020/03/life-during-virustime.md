@@ -4,6 +4,7 @@ publish = true
 date = 2020-03-16
 description = """Some resources I'm looking at to make socializing easier while
 we're all on lockdown."""
+aliases = ["/post/life-during-virustime/"]
 +++
 
 Since we're all alone together now, I wanted to share some resources[^1] I'm

@@ -5,6 +5,7 @@ date = 2020-02-19
 description = """In a world where most classes are kind of boring and most jobs
 focus on profits, one Recurse Center will buck the trend and rekindle our love
 of technology."""
+aliases = ["/post/day03-rc/"]
 +++
 
 Today's theme was attending a bunch of different events. Anyone at RC can add

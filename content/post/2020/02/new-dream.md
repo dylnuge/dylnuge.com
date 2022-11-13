@@ -4,6 +4,7 @@ publish = true
 date = 2020-02-03
 description = """Are screens really killing us? It's clear the internet is \
 changing, and that some of those changes are hostile. We can fix it."""
+aliases = ["/post/new-dream/"]
 +++
 
 I grew up on the internet, and I've watched it change in so many ways. I hear

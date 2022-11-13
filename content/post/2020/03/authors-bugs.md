@@ -4,6 +4,7 @@ publish = true
 date = 2020-03-11
 description = """From Ernest Hemingway to Ernest Cline, here are some bug
 reports voiced by authors."""
+aliases = ["/post/authors-bugs/"]
 +++
 
 ## Ernest Cline

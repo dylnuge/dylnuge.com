@@ -4,6 +4,7 @@ publish = true
 date = 2020-02-17
 description = """In which I meet people, play music, make DNS queries, and get
 less Rusty with Rust"""
+aliases = ["/post/hello-rc/"]
 +++
 
 Today I started in the Spring 1 batch of [Recurse

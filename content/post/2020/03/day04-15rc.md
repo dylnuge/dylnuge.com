@@ -4,6 +4,7 @@ publish = true
 date = 2020-03-09
 description = """I really need to stop using punny titles for my RC posts. This
 is becoming a problem."""
+aliases = ["/post/day04-15rc/"]
 +++
 
 I'm going to be writing my Recurse Center posts less frequently.[^1] I want to

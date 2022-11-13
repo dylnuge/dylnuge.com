@@ -5,6 +5,7 @@ date = 2020-02-18
 description = """Networks. The Final Frontier. These are the voyages of the
 Recurse Center. Its continuing mission: to make education something you do, not
 something done to you."""
+aliases = ["/post/day02-rc/"]
 +++
 
 Like I said at the end of my post yesterday, my goal for today was to focus on
