@@ -43,8 +43,9 @@
     <link rel="manifest" href="/site.webmanifest">
   </head>
   <body>
-    <header>
+    <header class="{{ .Params.header }}">
       <div class="content-container">
+      {{ if eq .Params.header "extended" }}
         <div class="site-title">Hi, I'm Dylan</div>
         <div class="site-subhead">
           I'm an NYC-based software engineer often going by <span class="console-text">
@@ -52,6 +53,7 @@
           writings on software and everything else.
         </div>
         <hr class="header-separator"></hr>
+      {{ end }}
         <nav class="main-nav">
           <a href="/">About</a>
           <a href="/post/">Blog</a>
