@@ -215,3 +215,29 @@ span.leaves-parody-code {
     font-weight: 700;
     color: #234c71;
 }
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #303131;
+        color: #f8fafa;
+    }
+
+    a:link,
+    a:visited {
+        color: #a6d9ee;
+    }
+
+    a:hover {
+        color: #a6eedf;
+    }
+
+    h1, h2 {
+        color: #5eb9e1;
+    }
+
+    h3 {
+        /* h3 is a slightly lighter blue for contrast accessibility */
+        color: #7bbedb;
+    }
+}
