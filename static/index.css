@@ -114,6 +114,10 @@ nav a:hover {
     color: #999999;
 }
 
+nav a.mastodon:hover {
+    color: #563acc;
+}
+
 nav a.twitter:hover {
     color: #00aced;
 }
