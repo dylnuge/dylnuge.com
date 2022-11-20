@@ -2,7 +2,7 @@
 title = "Cascading Complexity and the Great Cold Boot"
 publish = true
 date = 2022-11-14
-description = """A story about cold booting"""
+description = """A story about a cold, cold boot."""
 +++
 
 There's a lot of chatter going on about cold boots right now, and specifically
@@ -12,12 +12,15 @@ clarify *why* this problem is so difficult, so I thought I'd share it.
 
 Note that everything here happened a decade ago. I'm pretty sure my memory is
 inaccurate—I likely have forgotten certain things, and incorrectly mapped
-problems I saw some other time onto other problems. If anyone else who was there
-is reading this and has corrections, I welcome them!
+problems I saw some other time onto other problems. Also all the "error
+messages" and such are completely made up; while I'm relatively certain the
+errors were *similar* to the ones I'm putting here, I definitely do not remember
+the specific error messages.
 
-Also all the "error messages" and such are completely made up; while I'm
-relatively certain the errors were *similar* to the ones I'm putting here, I
-definitely do not remember the specific error messages.
+It might make the most sense to take this as a *hypothetical* failure case. The
+overall events happened, and the details are *real failures*. I have spent
+some time in the here-and-now researching and confirming the way I remember
+things makes sense.
 
 ## The Great Server Migration
 
@@ -33,16 +36,17 @@ As you might imagine, sysadmin was a weird "job" to have in an organization like
 that. It was fully voluntary; the people who did it were there because we wanted
 to be, because the idea of rebooting servers and handling user requests for
 additional storage space and fixing problems with printers[^1] were our idea of
-a fun time. Since we were a student club, there wasn't any real rhyme or reason
-to the services we maintained beyond "someone wanted it at some point." Most of
-the servers weren't set up while I was a student there[^2], and some of them
-were so old no one really knew what they did anymore.
+a fun time. We had a bunch of servers and workstations which we referred to as
+"the cluster," and since we were a student club, there wasn't any real rhyme or
+reason to the services we maintained beyond "someone wanted it at some point."
+Most of the servers weren't set up while I was a student there[^2], and some of
+them were so old no one really knew what they did anymore.
 
 At the same time, these were running services that students actively depended
 on; this was *not* just a bunch of toy projects that no one really needed.
 Plenty of students did their homework and lab work on our VMs or physical
-workstations because they were convienently located and easy to use. We ran AFS,
-a distributed file system with a very complex permissioning model that
+workstations because they were conveniently located and easy to use. We ran AFS,
+a distributed file system with a very complex permissions model that
 technically connected to a ton of *other* universities, and students were
 storing plenty of work there. We held an annual conference that brought in
 pretty amazing speakers and had a full-on career fair and the website was hosted
@@ -92,7 +96,7 @@ that sort of thing fun.[^6]
   list and both were in the same (secured) building, so we didn't have to worry
   about security while moving what amounted to a small fortune worth of
   computers. Both rooms had appropriate power, networking, and HVAC requirements
-  for our needs. The ACM network was independently managaed through the CS
+  for our needs. The ACM network was independently managed through the CS
   department's network administration tooling. The rooms were on different
   floors but both were very near the freight elevator (the rack itself was
   overweight for the passenger elevator). There was plenty of abandoned junk in
@@ -160,7 +164,7 @@ entire setup.
 Maybe we didn't start simple after all. Our computers are booting back up, so
 let's see; can we log in to my account?
 
-```
+```bash
 krb5: Clock skew too great while getting initial ticket.
 ```
 
@@ -196,7 +200,7 @@ a time machine, even by accident. Unix systems begin counting time from Jan 1,
 reason, this is often where they wind up.
 
 Time is very *important* though, and computers often have real reasons to know
-it. Authentication is a phenominal example! Kerberos uses a "ticket" system
+it. Authentication is a phenomenal example! Kerberos uses a "ticket" system
 where you request a ticket for your user account; that ticket is signed by the
 server and has a timeout on it, in order to prevent that ticket from being
 compromised and reused. Normally your client will keep requesting a new one when
@@ -223,7 +227,7 @@ literally no *real* reason for us to be doing this when the university already
 runs an NTP service for us. And of course that server didn't come up properly,
 so we need to start there. So let's switch our KVM over to that box and...
 
-```
+```bash
 Debian GNU/Linux 10 tty1
 login:
 ```
@@ -251,7 +255,7 @@ would work this way (I hope). Most of our servers have root passwords.
 
 In fact, we get doubly lucky here. SSH isn't supported on the root accounts (you
 have to be physically at the box to use them), but several of our systems don't
-use network accounts with wheel privilages at all, so there are a few things I
+use network accounts with wheel privileges at all, so there are a few things I
 still needed to occasionally log in by hand for, and I had a few of the root
 passwords memorized, including the ones used by the kerberos servers and the NTP
 server.
@@ -266,7 +270,7 @@ systems is pretty difficult, and there's a *lot* that can go wrong.
 Thankfully, it wasn't hard to get into the NTP server, and it was quite happy to
 tell us our next major issue:
 
-```
+```bash
 dhcpd: no free leases
 ```
 
@@ -314,8 +318,20 @@ comes back. Shut everything down at once and turn it all back on and you
 essentially have a race condition—will the static box get its IP before DHCP
 hands it out?[^14]
 
-In this case the answer was no.
+Well, luckily we have at least one other system with local root where we *are*
+on the network, so let's check out what's going on over there.
 
+```bash
+> ping -c4 192.168.1.17
+PING 192.168.1.17 (192.168.1.17) 56(84) bytes of data.
+64 bytes from 192.168.1.17 icmp_seq=1 ttl=63 time=0.71 ms
+64 bytes from 192.168.1.17 icmp_seq=2 ttl=63 time=1.44 ms
+64 bytes from 192.168.1.17 icmp_seq=3 ttl=63 time=1.10 ms
+64 bytes from 192.168.1.17 icmp_seq=4 ttl=63 time=0.89 ms
+```
+
+OK, so there's *something* running on the IP that the NTP server is supposed to
+get, and that something isn't the NTP server.[^15] But what is it?
 
 [^12]: A full explanation of routing is definitely way out of scope of this
   already rambling post, but for footnote readers, almost all of the ACM
@@ -330,12 +346,201 @@ In this case the answer was no.
   issues were independent from the dhcp issues, because there's nothing there
   anymore.
 [^14]: It's pretty subtle when dealing with "normal" failures, because DHCP
-  isn't guarenteed to hand out a lease with the IP address it's not supposed to
+  isn't guaranteed to hand out a lease with the IP address it's not supposed to
   use—even if there's an IP that should be reserved currently available, and
   even if there's a DHCP lease request, everything might still be fine.
+[^15]: One nice property here is we didn't have boxes that blocked ICMP traffic
+  on our network, so any system connected *would* respond to a ping. Probably.
+  Getting a non-answer here wouldn't rule out that something was running there
+  and just not replying to our ping for any number of reasons, but an answer
+  tells us there's something there for sure.
 
+### Server in a Haystack
 
-## Why Tell This Story?
+Just because we know something is here doesn't mean we know *where* it is. We
+have a couple dozen hosts running on this network, which isn't a ton; we can
+manually check them (assuming we know the root passwords), but that clearly
+isn't a scalable answer. So what are our other options?
+
+First, we can try to ssh into the box by its IP address. Most of our systems ran
+sshd, which would let us on the box remotely and allow us to query the hostname.
+One issue here is that none of our servers allowed for SSH via password
+authentication, though, and of course none of them supported root login over SSH
+either. This rules out SSH since network accounts are already inaccessible;
+everything will tell us connection refused without appropriate auth.
+
+But we know what kinds of services we run in general, so we could use `nmap` (or
+other tools) to try and query open ports on the box. Is it running a webserver
+(ports 80 and 443)? A mail server (port 25)? Is it one of our AFS boxes (various
+ports around 7000, with the exact port number actually IDing it down to the
+service it's running)?
+
+Logs! We can look at the logs on the DHCP server, which will tell us that
+indeed, a computer requested a lease and got that IP address. That computer will
+be identified by its MAC address in the logs, which is a six byte address that
+identifies a network card.[^16] Unfortunately, that's not much more useful to us
+than the IP address; we could look up the vendor of the network card using the
+address (specifically the first three bytes, or OUI), and in our case that's
+almost useful (we have so many different servers acquired over the year, and if
+it says it's a Sun Microsystems card we have it dead to rights), but still not
+much better than just manually checking.
+
+We could also configure the DHCP server to reserve `192.168.1.17` and not lease
+it out, but there's the issue of the server that already has it. We need to
+either wait for that computer to refresh its lease or, more likely, reboot
+everything again. And then, when it comes back up, it's possible *some other* IP
+collision has happened; we know for sure we have dynamic hosts, and we don't
+know what all the static IPs need to be.[^17]
+
+I think we did some combination of all of this, narrowing down the options and
+then ultimately just checking the boxes we did not rule out.
+
+[^16]: We don't need the DHCP logs to get this information; we can just directly
+    issue an ARP request, which asks the network to tell us who has the IP. But
+    the same problems apply in using the info.
+[^17]: Remember that we're still in recovery mode here; long term, this is a
+    configuration change that absolutely should be made!
+
+### Boot Loops
+
+OK, OK, we're back online, for real this time. I think I'm skipping a few other
+things, like messing with the switch configuration because some of the ports had
+been turned off on it and we hadn't actually kept track of which ones things
+were plugged into.[^18] Whatever, let's keep moving.
+
+Now begins the excruciating process of going service by service and seeing what
+fails to start, or gets caught in a boot loop—starting up, crashing, and
+rebooting. More stuff wasn't running than was, and the reasons were all across
+the board and just as complicated as any of the things I've described above.
+
+One of the major problems we had *here* was that a lot of these services had
+been set up by other people. We had to learn how they were configured and how
+they worked as we fixed them.
+
+I've kept you here for a while now, though, so I'll just cover a few of the fun
+ones:
+* Several VMs weren't booting, mostly Xen ones (the ESXi ones were newer and
+  generally happy). In one case, a VM was booting with a Xen flag I did not
+  recognize, so I went to the man page, and the man page had the words "TODO:
+  what does this do?" I had never before realized a man page could fail me like
+  that. I really wish I could find this, it was honestly hilarious.
+* Puppet, our config orchestration service, had to come back up with everything
+  else. This meant that plenty of boxes failed to pull their configs and fell
+  back on defaults which were completely wrong.
+* Our Windows systems had a whole separate host of problems, as did our Active
+  Directory service. I did not understand this and two other admins did, so I
+  didn't actually do any work on it and have no clue what they did, but based on
+  their faces when it finally worked, some form of blood sacrifice was involved.
+* One of the last services I got back up was our mail server, running Exim 4.
+  I spent the wee hours of the morning learning how to configure Exim, and
+  promptly dumped the information out of my memory.[^19]
+
+And that, dear reader, is the full-ish story of how I ultimately found myself
+with a small crowd of admins in a Perkins at 3 AM in the midst of a decent
+snowstorm. Coffee never tasted better.
+
+[^18]: Later on I will make the argument that real data centers are generally
+    *more* complicated than our setup here, but when it comes to cable
+    management, there is nothing like the mess of a well-loved hackerspace
+    server rack. Google has color coded cooling pipes; we had a label maker that
+    had been helpfully used to label things "Keyboard," "Mouse," and "Not a
+    Printer."
+[^19]: This is a lie. We did it again a few months later, when the university
+    decided to migrate everything from uiuc.edu to illinois.edu. Or maybe that
+    was a few months before all this, and my memory is spotty.
+
+## OK, Dylan, but this is The Real World™
+
+Right. I described a handful of different ways things can go wrong, but to be
+honest, I haven't talked about how *right* things went. It's natural to assume
+that "real" systems are far more robust than ours, and it's also correct! The
+problem is they're also far more complex, and designing for cold boot gets way
+harder.
+
+Absolutely nothing in the ACM cluster was designed to scale up or down. The
+servers we had were what we had. When VMs are dynamically spun up and down based
+on load, you have a huge number of additional things to keep track of:
+* There is something responsible for orchestrating this: deciding how many VMs
+  to start and when to terminate them. Hope the initial configs can actually
+  handle the traffic surge from a previously dead host coming back online.
+* There is a service discovery system which allows servers to figure out where
+  other servers they need to talk to are, which is far more complex than
+  hardcoded hostnames.
+* There's DNS, which needs to map hostnames and IPs correctly, often with VMs
+  having dynamic hostnames and addresses.
+* Consensus algorithms. I don't know enough about consensus to really say how
+  it's going to fail on a cold-booting data center specifically, but I do know
+  enough to say you will need an *expert* on hand.
+* Generally, there is more than one switch and more than one router. The
+  complexity of what can happen on a large network (broadcast storms, bad BGP
+  announcements, bad firewall configs, bandwidth saturation from initial startup
+  traffic bursts) seriously makes our network look like nothing.
+
+Now the people working on this (software engineers, site reliability engineers,
+data center operations, etc) are all very experienced in their domains. They are
+going to understand exactly how parts of their system fail, in ways that I can't
+even begin to anticipate. And *those people* have said that cold boots are
+nightmare scenarios they can't even begin to imagine.
+
+We build software complexity on top of existing services. We imagine if some of
+them go down but never if *all of them* go down, all at once, because that is
+very hard to imagine. This is especially true at the lower levels of the
+networking stack: the physical cables must be assumed to exist. The ability to
+route traffic to other computers (and to know which computers to send it to)
+must be assumed to exist. When the Facebook outage happened, I talked to a lot
+of brilliant engineers who had never worked with BGP before and had no idea just
+how catastrophic failures at this layer could be.
+
+Big companies also have *security* on a scale ACM very much didn't. There almost
+certainly aren't sysadmins at big companies who have memorized root passwords to
+server rack head nodes. Physical access isn't a bike ride away from engineer's
+off-campus apartment, and badging isn't done on some independent system. If the
+systems which ensure people are who they say they are can't come back, access
+might be gone *permanently*.
+
+Incident management is going to be a mess overall too. When big issues like this
+happen normally, there are systems for people to communicate. You put someone in
+charge of just coordinating the thing, and rotate them regularly (with clear
+handoffs). Having everyone jump in at once with ideas is a mess, and you need
+ways to handle that. The systems you use for that are all probably down though.
+
+There's a human cost to incident management too. The people who know what they
+are doing are going to immediately be energized and excited; it's a natural
+stress reaction, and in my experience it's particularly pronounced among anyone
+who chooses to do ops work on purpose. But you're looking at a multi-day outage
+at least, and if you don't start managing sleep schedules, that's going to lead
+to some real mistakes being made as people start getting exhausted.
+
+Oh, and people will quit. Like seriously, the worse it is, the more likely
+someone breaks down, gives up, and walks out. If one person does it, others
+will follow. Are you giving out bonuses to keep people around? Do you have the
+money to do that? Is your payroll system even working?
+
+Let's say you get it all back online—and you will, most likely, eventually, it
+was "done once before" more or less, it will be figured out, though it might
+take a few days or weeks.[^20] Now what? Cold start load is going to look
+entirely different from anything that came before it. Nothing is in cache.
+Nothing.[^21] The traffic loads will be *weird*. They won't look like the site
+does under high traffic normally, and the ways they don't are likely ways no one
+ever built for.
+
+How long were you down for? A week? A month? There are serious business
+implications here. You've lost users, and probably a lot of them. People who
+made your site part of their daily routine found something else to fill that in.
+You have clients you certainly owe money to in some form or another
+(advertisers, subscribers, those sort of folk).
+
+None of this is definitely the end of a business, but all of it is pretty
+catastrophic. At the very least, there's going to be a hell of a postmortem.
+
+[^20]: Or the company will go bankrupt first. These are essentially the two
+  options.
+[^21]: OK, you could be pre-populating caches on startup, that's a thing, but
+  then you're still experiencing the problem when those caches try to all
+  pre-populate at once, and I doubt every single service is doing this, just
+  the ones where it makes sense under normal operating circumstances.
+
+## So What?
 
 Cascading failures can make recovery incredibly difficult. I think it's pretty
 tempting sometimes to turn everything off and see what breaks, but coming back
@@ -362,16 +567,16 @@ out. Basically it says "if you don't know why something exists, you shouldn't
 get rid of it until you do."
 
 I don't think that should be followed as a hard and fast rule. There are quite
-certianly exceptions; cases where turning something off will *help* figure out
+certainly exceptions; cases where turning something off will *help* figure out
 what it does. After all, I learned far more from moving the servers upstairs
 than I ever would have from leaving them all alone.
 
 Suffice it to say, I'm not all-in on the idea of "just shut down all the
-non-critical microservices and see what happens." It certianly seems like a wild
+non-critical microservices and see what happens." It certainly seems like a wild
 idea when you've lost the vast majority of the staff who understood these
 systems in the first place.
 
-[^40]: There are still ways in a "real" system to have an equivilent of root
+[^40]: There are still ways in a "real" system to have an equivalent of root
   passwords that people have memorized; for instance, you could have a handful
   of authorized users who use personally known passwords to secure system access
   tokens with something like Shamir's Secret Sharing. This is how Vault works,
