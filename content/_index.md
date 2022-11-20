@@ -114,32 +114,3 @@ Here they are.
     time, so I kind of hate it now and would love to edit it.
   </li>
 </ul>
-
-### Other Random Things
-
-None of this stuff is quite complete, but if you're looking to deep dive into
-random stuff I've made public, here it is.
-
-<ul class="project-links">
-  <li>
-    <a href="https://github.com/Dylnuge/montague">Montague</a>
-    &mdash;
-    A simple lightweight recursive DNS server written in Rust.
-  </li>
-  <li>
-    <a href="https://github.com/Dylnuge/cryptopals">Cryptopals</a>
-    &mdash;
-    First two problem sets for the Cryptopals challenges by Matasano.
-    I'd eventually like to go back and add more. I did this in Go,
-    partially to learn Go at the time.
-  </li>
-  <li>
-    <a href="https://twitter.com/dylnuge/status/1072746366697299968">
-      Twitter Thread on the Toxicity of "Genius Assholes"</a>
-    &mdash;
-    It's just a twitter thread, but I'm pretty happy with it. It's about
-    an experience I had in college and how it helped me see that
-    brandishing skill and intellect as a weapon damages projects. It's
-    quick, just go read it.
-  </li>
-</ul>
