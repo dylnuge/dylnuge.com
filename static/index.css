@@ -34,7 +34,6 @@ strong {
 
 h1 {
     font-size: 3rem;
-    font-family: 'Rubik', sans-serif;
     font-weight: 400;
     color: #1e79a1;
     margin: 1em 0 .5em;
@@ -43,7 +42,6 @@ h1 {
 
 h2 {
     font-size: 2.0rem;
-    font-family: 'Rubik', sans-serif;
     font-weight: 400;
     color: #1e79a1;
     margin: 1em 0 .5em;
@@ -139,7 +137,7 @@ nav.right-nav {
 }
 
 nav.right-nav a, nav.right-nav a:hover, nav.right-nav a:link, nav.right-nav a:visited {
-    padding-left: 1rem;
+    padding-left: 0.75rem;
     padding-right: 0rem;
 }
 
