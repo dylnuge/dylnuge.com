@@ -193,6 +193,10 @@ Cool. We're off to a good start.
 [^8]: Or barely notice; sometimes your desktop background will show a default
   one and then flicker and change into your personally configured choice.
 
+[krb]: https://en.wikipedia.org/wiki/Kerberos_(protocol)
+[ldap]: https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol
+[afs]: https://en.wikipedia.org/wiki/Andrew_File_System
+
 ### Does Anyone Really Know What Time It Is?
 
 Time is likely the most evil concept humans have come up with; it is at the very
