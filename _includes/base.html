@@ -2,34 +2,24 @@
 <html lang="en">
   <head>
     <title>
-      {{ block "title" . }}
-        {{ .Site.Title }}
-      {{ end }}
+      {{ title | default: "Dylan Nugent" }}
     </title>
 
     <!-- Site Metadata -->
     <meta charset="utf-8">
-    <meta name="title" content="{{ .Title }}">
+    <meta name="title" content="{{ title }}">
     <meta name="author" content="Dylan Nugent">
-    {{ if .Params.description }}
-      <meta name="description" content="{{ .Params.description }}">
-    {{ else }}
-      <meta name="description" content="Dylan's random musings on life, software, and everything.">
-    {{ end }}
+    <meta name="description" content="{{ description | Dylan's random musings on life, software, and everything.}}">
 
     <meta name="twitter:card" content="summary"></meta>
+    <meta name="twitter:site" content="@dylnuge">
+    <meta name="twitter:creator" content="@dylnuge">
     <!-- Dumb that this is a duplicate of the above but it seems to be needed;
       Twitter won't fall back on "normal" meta tags. Can probably consolidate
       this at some point. -->
     <meta property="og:title" content="{{ .Title }}">
     <meta property="og:author" content="Dylan Nugent">
-    {{ if .Params.description }}
-      <meta property="og:description" content="{{ .Params.description }}">
-    {{ else }}
-      <meta property="og:description" content="Dylan's random musings on life, software, and everything.">
-    {{ end }}
-    <meta name="twitter:site" content="@dylnuge">
-    <meta name="twitter:creator" content="@dylnuge">
+    <meta property="og:description" content="{{ description | Dylan's random musings on life, software, and everything.}}">
 
     <!-- Stylesheets, Fonts, and Icons -->
     <link href="/index.css" rel="stylesheet">
@@ -77,9 +67,7 @@
 
     <div class="main-content">
       <div class="content-container">
-          {{ block "main" . }}
-
-          {{ end }}
+        {{ content }}
       </div>
     </div>
   </body>
