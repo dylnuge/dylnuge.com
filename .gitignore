@@ -5,3 +5,6 @@ node_modules/
 
 # Hugo lock file, anything similarly named
 *.lock
+
+# 11ty build outputs
+_site/*
